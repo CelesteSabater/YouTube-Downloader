@@ -8,7 +8,7 @@ from tkinter import filedialog
 
 path = ""
 app = tk.Tk()
-#si quieres sentirte diseñador gráfico toquetea esta basura
+#si quieres sentirte un diseñador gráfico toquetea esta basura
 c_exterior = "#263D42"
 c_interior = "white"
 c_button = "#263D42"
@@ -16,7 +16,7 @@ c_l_button = "white"
 c_l_interior = "black"
 
 
-#descarga un vídeo y a los audios además le cambia el formato a .mp3, es sencillo
+#descarga un vídeo y a los audios, es sencillo
 def descarga(url, name, option):
     yt = YouTube(url)
     if option == "1":
@@ -29,7 +29,7 @@ def descarga(url, name, option):
     dir1 = tk.Label(interior, text="¡Listo!", fg=c_l_interior, bg=c_interior)
     dir1.pack()
 
-#esta puta mierda lo que hace es que el usuario pueda seleccionar donde se realizarán las descargas
+#esta mierda lo que hace es que el usuario pueda seleccionar donde se realizarán las descargas
 def ubicacion():
     path = filedialog.askdirectory(initialdir="/", title="Selecciona una carpeta donde descargar los vídeos...")
     if path != '':
@@ -71,7 +71,7 @@ def limpieza():
     direcciooooon.pack()
 
 
-# https://i0.kym-cdn.com/photos/images/facebook/001/018/866/e44.png
+# http://ih0.redbubble.net/image.82233968.6707/flat,800x800,075,f.jpg
 exterior = tk.Canvas(app, height=700, width=600, bg=c_exterior)
 exterior.pack()
 interior = tk.Frame(exterior, bg=c_interior)
