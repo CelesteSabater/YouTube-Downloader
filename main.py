@@ -8,7 +8,7 @@ from tkinter import filedialog
 
 path = ""
 app = tk.Tk()
-#si quieres sentirte un diseñador gráfico toquetea esta basura
+#modificar diseño gráfico de la app
 c_exterior = "#263D42"
 c_interior = "white"
 c_button = "#263D42"
@@ -16,7 +16,7 @@ c_l_button = "white"
 c_l_interior = "black"
 
 
-#descarga un vídeo y a los audios, es sencillo
+# descarga un vídeo o un audio, es sencillo
 def descarga(url, name, option):
     yt = YouTube(url)
     if option == "1":
@@ -29,7 +29,7 @@ def descarga(url, name, option):
     dir1 = tk.Label(interior, text="¡Listo!", fg=c_l_interior, bg=c_interior)
     dir1.pack()
 
-#esta mierda lo que hace es que el usuario pueda seleccionar donde se realizarán las descargas
+# esto lo que hace es que el usuario pueda seleccionar donde se realizarán las descargas
 def ubicacion():
     path = filedialog.askdirectory(initialdir="/", title="Selecciona una carpeta donde descargar los vídeos...")
     if path != '':
@@ -39,7 +39,7 @@ def ubicacion():
         dir2 = tk.Label(interior, text=path, fg=c_l_interior, bg=c_interior)
         dir2.pack()
 
-#descarga una playlist llamando a la primera función
+# descarga una playlist llamando al método
 def dw_playlist():
     opcion = tks.askstring("Opción...", "Descargar vídeo y audio: 1. Descargar solo audio: 2.")
     while opcion != "1" and opcion != "2":
@@ -51,7 +51,7 @@ def dw_playlist():
         raw_name = video.title
         descarga(url, raw_name, opcion)
 
-#manda un mensaje a la primera función para que haga su thing
+# descarga un solo vídeo llamando al primer método
 def dw_vid():
     opcion = tks.askstring("Opción...", "Descargar vídeo y audio: 1. Descargar solo audio: 2.")
     while opcion != "1" and opcion != "2":
@@ -61,7 +61,7 @@ def dw_vid():
     raw_name = video.title
     descarga(url, raw_name, opcion)
 
-#limpia toda la puta mierda innecesaria que hay en pantalla
+# limpiar texto de la pantalla
 def limpieza():
     for basura in interior.winfo_children():
         basura.destroy()
