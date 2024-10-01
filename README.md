@@ -1,3 +1,1 @@
-# YouTube-Downloader
-Una app sencilla creada en Python para descargar vídeos de YouTube sin tener que tragarte 50 anuncios en páginas raras.
-Si te la descargas, el .exe no funciona, como la api de YouTube cambia cada poco hay que actualizar las librerías, y no me apetece mirarme como actualizar automáticamente las librerias de un .exe hecho desde python.
+A simple app created in Python to download videos from YouTube without having to see 50 ads on weird pages.
